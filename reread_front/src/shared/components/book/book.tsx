@@ -1,5 +1,7 @@
 import type { BookPost } from '../../types/book.model';
 import { Card, Button, Badge } from 'react-bootstrap';
+import './book.css';
+
 interface BookProps {
   book: BookPost;
 }
@@ -8,7 +10,7 @@ const Book: React.FC<BookProps> = ({ book }) => {
   return (
     <Card className="h-100 shadow-sm border-2">
       <Card.Header>{book.sellerId}</Card.Header>
-      <div style={{ height: '380px', width: '303px', overflow: 'hidden' }}>
+      <div className="book-img">
         <Card.Img
           variant="top"
           src={book.imageUrl}
@@ -19,18 +21,16 @@ const Book: React.FC<BookProps> = ({ book }) => {
 
       <Card.Body className="d-flex flex-column">
         <div className="d-flex justify-content-between align-items-start mb-2">
-          <Card.Title
-            className="mb-0"
-            style={{ maxWidth: '70%' }}
-          >
+          <Card.Title className="mb-0" style={{ maxWidth: '70%' }}>
             {book.title} | By {book.author}
           </Card.Title>
           <Badge bg="light-green">${book.price}</Badge>
         </div>
 
         <Card.Subtitle className="mb-3 text-muted">
-          {book.description}{' '}
+          {book.description}
         </Card.Subtitle>
+        <Card.Subtitle className="mb-3">{book.summery}</Card.Subtitle>
 
         <div className="mt-auto">
           <Button variant="light-blue" className="w-100">

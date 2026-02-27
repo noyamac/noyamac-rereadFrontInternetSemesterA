@@ -15,6 +15,7 @@ const Home: React.FC = () => {
       imageUrl: '/src/assets/harrypotter1.jpg',
       sellerId: 'usrid1',
       description: 'harry potter book good condition',
+      summery: 'book summery',
       comments: [],
     },
     {
@@ -25,6 +26,7 @@ const Home: React.FC = () => {
       imageUrl: '/src/assets/harrypotter1.jpg',
       sellerId: 'usrid2',
       description: 'harry potter book good condition',
+      summery: 'book summery',
       comments: [],
     },
     {
@@ -35,6 +37,7 @@ const Home: React.FC = () => {
       imageUrl: '/src/assets/harrypotter1.jpg',
       sellerId: 'usrid2',
       description: 'harry potter book good condition',
+      summery: 'book summery',
       comments: [],
     },
     {
@@ -45,6 +48,7 @@ const Home: React.FC = () => {
       imageUrl: '/src/assets/harrypotter1.jpg',
       sellerId: 'usrid4',
       description: 'harry potter book good condition',
+      summery: 'book summery',
       comments: [],
     },
     {
@@ -55,6 +59,7 @@ const Home: React.FC = () => {
       imageUrl: '/src/assets/harrypotter1.jpg',
       sellerId: 'usrid1',
       description: 'harry potter book good condition',
+      summery: 'book summery',
       comments: [],
     },
     {
@@ -65,6 +70,7 @@ const Home: React.FC = () => {
       imageUrl: '/src/assets/harrypotter1.jpg',
       sellerId: 'usrid1',
       description: 'harry potter book good condition',
+      summery: 'book summery',
       comments: [],
     },
   ]);

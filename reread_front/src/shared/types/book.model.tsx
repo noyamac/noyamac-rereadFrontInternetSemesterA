@@ -6,5 +6,6 @@ export interface BookPost {
   imageUrl: string;
   sellerId: string;
   description: string;
+  summery: string;
   comments: Comment[];
 }
