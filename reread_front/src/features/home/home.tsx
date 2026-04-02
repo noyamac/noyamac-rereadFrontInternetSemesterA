@@ -1,79 +1,13 @@
 import React, { useState } from 'react';
-import type { BookPost } from '../../shared/types/book.model';
-import Book from '../../shared/components/book/book';
 import { Col, Container, Form, Row } from 'react-bootstrap';
+import Book from '../../shared/components/book/book';
+import type { BookPost } from '../../shared/types/book.model';
+import { mockBooks } from './utils/mockbooks';
 
 const Home: React.FC = () => {
   const [serachInput, setSearchInput] = useState<string>('');
 
-  const [books] = useState<BookPost[]>([
-    {
-      id: '123',
-      title: 'harry potter',
-      author: 'j k rolling',
-      price: 89,
-      imageUrl: '/src/assets/harrypotter1.jpg',
-      sellerId: 'usrid1',
-      description: 'harry potter book good condition',
-      summery: 'book summery',
-      comments: [],
-    },
-    {
-      id: '1234',
-      title: 'harry potter 2',
-      author: 'j k rolling',
-      price: 89,
-      imageUrl: '/src/assets/harrypotter1.jpg',
-      sellerId: 'usrid2',
-      description: 'harry potter book good condition',
-      summery: 'book summery',
-      comments: [],
-    },
-    {
-      id: '3',
-      title: 'harry potter3',
-      author: 'j k rolling',
-      price: 89,
-      imageUrl: '/src/assets/harrypotter1.jpg',
-      sellerId: 'usrid2',
-      description: 'harry potter book good condition',
-      summery: 'book summery',
-      comments: [],
-    },
-    {
-      id: '4',
-      title: 'harry potter4',
-      author: 'j k rolling',
-      price: 89,
-      imageUrl: '/src/assets/harrypotter1.jpg',
-      sellerId: 'usrid4',
-      description: 'harry potter book good condition',
-      summery: 'book summery',
-      comments: [],
-    },
-    {
-      id: '5',
-      title: 'harry potter5',
-      author: 'j k rolling',
-      price: 89,
-      imageUrl: '/src/assets/harrypotter1.jpg',
-      sellerId: 'usrid1',
-      description: 'harry potter book good condition',
-      summery: 'book summery',
-      comments: [],
-    },
-    {
-      id: '6',
-      title: 'harry potter6',
-      author: 'j k rolling',
-      price: 89,
-      imageUrl: '/src/assets/harrypotter1.jpg',
-      sellerId: 'usrid1',
-      description: 'harry potter book good condition',
-      summery: 'book summery',
-      comments: [],
-    },
-  ]);
+  const [books] = useState<BookPost[]>(mockBooks);
 
   const filteredBooks = books.filter((book) => {
     const searchText = serachInput.toLowerCase();
